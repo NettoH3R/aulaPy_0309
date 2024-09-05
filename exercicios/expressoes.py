@@ -7,15 +7,7 @@ def mdc(a,b):
     return a
 
 def mmc(a,b):
+    return abs(a * b) / mdc(a, b)
 
-    if a > b:
-        maior = a
-    else:
-        maior = b
-
-    for i in range(maior):
-        aux = a * i
-        if (aux % b) == 0:
-            mmc = aux
-
-    print(mmc)
+def mdc_lista(lista):
+    return reduce(mdc, lista)
