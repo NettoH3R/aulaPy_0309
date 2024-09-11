@@ -77,6 +77,7 @@ def remove_repeticoes(lista):
     return list(set(lista))
 
 
+
 def calcula_moda(lista):
     contagem = Counter(lista)  # Conta a frequência de cada elemento
     max_frequencia = max(contagem.values())  # Encontra a frequência máxima
@@ -84,15 +85,29 @@ def calcula_moda(lista):
     return modas
 
 
+
 def uniao_conjuntos(lista1, lista2):
     return list(set(lista1) | set(lista2))
+
 
 
 def intersecao_conjuntos(lista1, lista2):
     return list(set(lista1) & set(lista2))
 
 
+
 def diferenca_conjuntos(lista1, lista2):
     return list(set(lista1) - set(lista2))
 
+
+
+def subconjunto(lista1, lista2):
+    conjunto1 = set(lista1)
+    conjunto2 = set(lista2)
+
+    lista = [elem for elem in lista1 if elem in lista2]
+
+    caso = all(elem in lista2 for elem in lista1)
+
+    return lista , caso
 
