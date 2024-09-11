@@ -1,3 +1,4 @@
+import math
 from functools import reduce
 
 def mdc(a,b):
@@ -61,3 +62,9 @@ def fatores_primos(n):
             divisor += 1
         
         return fatores
+
+
+def combinacoes(m, n):
+    if n > m:
+        return 0  
+    return math.factorial(m) // (math.factorial(m - n) * math.factorial(n))
