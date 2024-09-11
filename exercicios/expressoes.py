@@ -11,7 +11,7 @@ def mdc(a,b):
 
 
 
-#calcula minimo multiplo comum
+
 def mmc(a,b):
     return abs(a * b) // mdc(a, b)
 
@@ -25,7 +25,7 @@ def mdc_lista(lista):
 
 
 
-#calcula minimo multiplo comum de todos os elementos de uma lista
+
 def mmc_lista(lista):
     if not lista:
         raise ValueError("A lista não pode estar vazia")
@@ -64,7 +64,15 @@ def fatores_primos(n):
         return fatores
 
 
+
 def combinacoes(m, n):
     if n > m:
         return 0  
     return math.factorial(m) // (math.factorial(m - n) * math.factorial(n))
+
+
+
+def remove_repeticoes(lista):
+    return list(set(lista))
+
+
