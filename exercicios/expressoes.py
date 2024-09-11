@@ -1,5 +1,6 @@
 import math
 from functools import reduce
+from collections import Counter
 
 def mdc(a,b):
     while b != 0:
@@ -76,3 +77,8 @@ def remove_repeticoes(lista):
     return list(set(lista))
 
 
+def calcula_moda(lista):
+    contagem = Counter(lista)  # Conta a frequência de cada elemento
+    max_frequencia = max(contagem.values())  # Encontra a frequência máxima
+    modas = [item for item, frequencia in contagem.items() if frequencia == max_frequencia]  # Retorna os elementos com a frequência máxima
+    return modas
