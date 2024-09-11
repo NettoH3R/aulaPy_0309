@@ -82,3 +82,7 @@ def calcula_moda(lista):
     max_frequencia = max(contagem.values())  # Encontra a frequência máxima
     modas = [item for item, frequencia in contagem.items() if frequencia == max_frequencia]  # Retorna os elementos com a frequência máxima
     return modas
+
+
+def uniao_conjuntos(lista1, lista2):
+    return list(set(lista1) | set(lista2))
