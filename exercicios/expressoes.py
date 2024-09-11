@@ -8,9 +8,13 @@ def mdc(a,b):
     
     return a
 
+
+
 #calcula minimo multiplo comum
 def mmc(a,b):
     return abs(a * b) // mdc(a, b)
+
+
 
 
 def mdc_lista(lista):
@@ -18,11 +22,15 @@ def mdc_lista(lista):
         raise ValueError("A lista não pode estar vazia")
     return reduce(mdc, lista)
 
+
+
 #calcula minimo multiplo comum de todos os elementos de uma lista
 def mmc_lista(lista):
     if not lista:
         raise ValueError("A lista não pode estar vazia")
     return reduce(mmc, lista)
+
+
 
 def testa_primos():
     primos_list = []
@@ -39,3 +47,17 @@ def testa_primos():
             primos_counter += 1
 
     return primos_list, primos_counter
+
+
+
+def fatores_primos(n):
+        fatores = []
+        divisor = 2
+        
+        while n > 1:
+            while n % divisor == 0:
+                fatores.append(divisor)
+                n //= divisor
+            divisor += 1
+        
+        return fatores
